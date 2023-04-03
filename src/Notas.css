@@ -1,0 +1,37 @@
+* {
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.notascn {
+    width: 95%;
+    margin: 10px auto;
+    border: 5px solid orange;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+  .generalescn {
+    border: 5px solid orange;
+    border-radius: 10px;
+}
+
+.generalescn, input, table {
+    margin: 5px 10px;
+}
+
+.cuerponotacn {
+    border: 5px solid orange;
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+body {
+    background-color: lightgray;
+}
