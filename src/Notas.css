@@ -7,7 +7,7 @@
 .notascn {
     width: 95%;
     margin: 10px auto;
-    border: 5px solid orange;
+    border: 5px solid dodgerblue;
     border-radius: 10px;
     background-color: white;
     padding: 10px;
@@ -18,7 +18,7 @@ table, th, td {
 }
 
   .generalescn {
-    border: 5px solid orange;
+    border: 5px solid dodgerblue;
     border-radius: 10px;
 }
 
@@ -27,7 +27,7 @@ table, th, td {
 }
 
 .cuerponotacn {
-    border: 5px solid orange;
+    border: 5px solid dodgerblue;
     border-radius: 10px;
     margin: 10px;
   }

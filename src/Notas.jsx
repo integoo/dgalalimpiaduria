@@ -10,18 +10,24 @@ function Notas(){
     const [ arraydb, setArraydb ] = useState([
         {id: "1", name:"JESUS EZEQUIEL", lastname:"UGALDE LOPEZ",tel:"664 599 02 40"}
     ])
+    const [ nomsucursal, setNomsucursal ] = useState("01 San Pedro")
+    const [ folio, setFolio ] = useState(1)
+    const [ fecha, setFecha ] = useState("Mar/19/2023")
 
 
         return(
             <div className="notascn">
                 <h3>REGISTRO DE NOTAS</h3>
                 <br />
-                <b>Sucursal</b>
-                <input type="text" value="01 San Pedro" readOnly={true} />
-                <b>Folio</b>
-                <input type="text" value="1" readOnly={true} />
-                <b>Fecha</b>
-                <input type="text" value="Mar/19/2023" readOnly={true}/>
+                <b style={{margin:"6px"}}>Sucursal</b>
+                {/* <input type="text" value="01 San Pedro" readOnly={true} style={{border:"none"}} /> */}
+                {nomsucursal}
+                <b style={{margin:"6px"}}>Folio</b>
+                {/* <input type="text" value="1" size="5" style={{textAlign:"right", border: "none"}} readOnly={true} /> */}
+                {folio}
+                <b style={{margin:"6px"}}>Fecha</b>
+                {/* <input type="text" value="Mar/19/2023" size="11" readOnly={true} style={{border:"none"}} /> */}
+                {fecha}
                 <div className="clientescn">
                     <div className="generalescn">
                         {/*Consulta Clientes */}
@@ -49,13 +55,12 @@ function Notas(){
                                 setArraydb(arreglo)
                                 setClienteJson(jsondb)
                             }}/>
-                        :
+                            :
                             null 
                         }
                     </div>
-                </div>
-            </div>
-            )
+
+                        </div>
 
 
 
@@ -67,57 +72,54 @@ function Notas(){
 
 
 
-
-        
-        //             </div>
-        //             <div className="cuerponotacn">
-        //                 <h5>Detalle</h5>
-        //                 <table>
-        //                     <thead>
-        //                         <tr>
-        //                             <th>Prenda</th>
-        //                             <th>Descripción</th>
-        //                             <th>Cantidad</th>
-        //                             <th>Precio Unitario</th>
-        //                             <th>Total</th>
-        //                         </tr>
-        //                     </thead>
-        //                     <tbody>
-        //                         <tr>
-        //                             <td>Pantalón</td>
-        //                             <td></td>
-        //                             <td>0</td>
-        //                             <td>$ 100</td>
-        //                             <td>$ 0</td>
-        //                         </tr>
-        //                         <tr>
-        //                             <td>Camisa</td>
-        //                             <td></td>
-        //                             <td>0</td>
-        //                             <td>$ 100</td>
-        //                             <td>$ 0</td>
-        //                         </tr>
-        //                         <tr>
-        //                             <td>Saco</td>
-        //                             <td></td>
-        //                             <td>0</td>
-        //                             <td>$ 100</td>
-        //                             <td>$ 0</td>
-        //                         </tr>
-        //                         <tr>
-        //                             <td>Abrigo</td>
-        //                             <td></td>
-        //                             <td>0</td>
-        //                             <td>$ 100</td>
-        //                             <td>$ 0</td>
-        //                         </tr>
-        //                     </tbody>
-        //                 </table>
-        //             </div>
-        //             <br />
-        //         </div>
-        //     </div>
-        // )
-}
-
-export default Notas;
+<div className="cuerponotacn">
+                        <h5>Detalle</h5>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Prenda</th>
+                                    <th>Cantidad</th>
+                                    <th>Descripción</th>
+                                    <th>Precio Unitario</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style={{padding:"6px"}}>Pantalón</td>
+                                    <td><input type="number" min="0" max="100" value={0} /></td>
+                                    <td style={{padding:"6px"}}><button>...</button></td>
+                                    <td style={{textAlign:"right", paddingRight:"6px"}}>$ 100.00</td>
+                                    <td style={{textAlign:"right", paddingRight:"6px"}}>$ 0.00</td>
+                                </tr>
+                                <tr>
+                                    <td>Camisa</td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td>$ 100</td>
+                                    <td>$ 0</td>
+                                </tr>
+                                <tr>
+                                    <td>Saco</td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td>$ 100</td>
+                                    <td>$ 0</td>
+                                </tr>
+                                <tr>
+                                    <td>Abrigo</td>
+                                    <td></td>
+                                    <td>0</td>
+                                    <td>$ 100</td>
+                                    <td>$ 0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <br />
+                    </div>
+                    )
+                }
+                
+                export default Notas;
